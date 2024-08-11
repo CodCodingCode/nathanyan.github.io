@@ -16,5 +16,4 @@ env/
 .vscode/
 
 # Django static and media files #
-staticfiles/
 media/

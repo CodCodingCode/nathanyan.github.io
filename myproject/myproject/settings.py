@@ -53,11 +53,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myproject.urls'
+import os 
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +71,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
@@ -125,7 +128,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+import os
+
+STATIC_URL = '/static/'  # This should already be there
+
+# Add this line:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

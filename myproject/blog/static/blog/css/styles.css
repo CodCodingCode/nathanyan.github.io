@@ -1,0 +1,93 @@
+/* General styling for body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Styling for blog container */
+.blog-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Blog list styling */
+.blog-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.blog-item h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.blog-item h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.blog-item h2 a:hover {
+    color: #007BFF;
+}
+
+.blog-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}

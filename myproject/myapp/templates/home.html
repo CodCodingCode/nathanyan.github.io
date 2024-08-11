@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}" />
   </head>
   <body>
-    <h1>Welcome to My Website</h1>
     <nav>
       <a href="{% url 'home' %}">Home</a> |
       <a href="{% url 'about' %}">About</a> |
@@ -13,6 +14,16 @@
       <a href="{% url 'blog_home' %}">Blog</a>
     </nav>
 
-    <p>This is the homepage of my simple website.</p>
+    <div class="container">
+      <div style="text-align: center">
+        <h1>Welcome to My Website</h1>
+        <p>This is the homepage of my simple website.</p>
+        <img
+          src="{% static 'blog/images/image.jpg' %}"
+          alt="My Photo"
+          style="width: 12.5%; height: auto"
+        />
+      </div>
+    </div>
   </body>
 </html>

@@ -1,10 +1,10 @@
 # myapp/urls.py
 from django.urls import path
-from .views import hello_world
-from .views import contact
-from .views import error_page
+from . import views
+
 
 urlpatterns = [
-    path('', hello_world, name='hello_world'),
-
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
 ]

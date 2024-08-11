@@ -17,11 +17,10 @@ Including another URLconf
 # myproject/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from myapp import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.contact, name='home'),  # Set root URL to point to the contact view
-    path('contact/', views.contact, name='contact'),  # Ensure this points to your app's urls.py
+    path('', include('myapp.urls')),  # Include app URLs
+    path('blog/', include('blog.urls')),  # Include blog URLs
 ]
+
